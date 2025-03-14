@@ -1,0 +1,32 @@
+<!-- كارت تفاصيل المنتج -->
+<div class="bg-white rounded-2xl shadow-lg max-w-2xl w-full p-6 relative mx-auto ">
+
+  <!-- صورة المنتج -->
+  <div class="flex flex-col md:flex-row gap-6 justify-start">
+    <img [src]="cartDetails.image" [alt]="cartDetails.title" class="w-full md:w-1/2 h-60 object-contain rounded-lg">
+
+    <!-- تفاصيل المنتج -->
+    <div class="flex flex-col justify-between">
+      <h2 class="text-2xl font-bold text-gray-800">{{cartDetails.title| customSlice: ' ':0:3:' ' }}</h2>
+      <p class="text-gray-600 mt-2">
+        {{cartDetails.description}}
+      </p>
+
+      <!-- التقييم -->
+      <div class="mt-2 flex items-center text-yellow-400">
+        <i class="fa-solid fa-star"></i>
+        <span class="ml-2">{{cartDetails.rating.rate}} / 5</span>
+      </div>
+
+      <!-- السعر -->
+      <p class="text-green-600 font-bold text-xl mt-4">{{cartDetails.price| currency }}</p>
+
+      <!-- أزرار التفاعل -->
+      <div class="mt-6 flex gap-4">
+        <button class="bg-gray-300 text-gray-700 px-6 py-2 rounded-lg shadow-md hover:bg-gray-400" routerLink = '/home'>
+          Close
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
