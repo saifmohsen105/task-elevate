@@ -12,6 +12,6 @@ export const routes: Routes = [
   },
   {
     path: 'details/:id',
-    loadComponent: () => import('./Pages/details-cart/details-cart/details-cart.component').then(m => m.DetailsCartComponent)
+    loadComponent: () => import('./Pages/details-cart/details-cart/details-cart.component').then(m => m.DetailsCartComponent),data: { renderMode: 'server' }
   }
 ];
